@@ -130,8 +130,8 @@ export class AppComponent {
   private ytPlayers: Array<any | null> = [null, null, null];
   private ytReady = false;
 
-  // slide 1: Tớ thích cậu, slide 3: Em đã biết (ItRExComFJ4), slide 2: no music
-  readonly youtubeVideoIds: [string, string, string] = ['S1Tq2LazfXQ', '', 'ItRExComFJ4'];
+  // slide 1: Tớ thích cậu (ZXaug3KMr1U), slide 3: Em đã biết (ItRExComFJ4), slide 2: no music
+  readonly youtubeVideoIds: [string, string, string] = ['ZXaug3KMr1U', '', 'ItRExComFJ4'];
 
   onScroll() {
     const el = this.slidesEl?.nativeElement;
