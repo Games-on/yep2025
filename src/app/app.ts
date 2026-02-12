@@ -251,10 +251,23 @@ export class AppComponent {
   }
 
   toggleYoutube(slide: 0 | 1 | 2) {
+    if (!this.ytReady) {
+      return;
+    }
+
+    // đảm bảo player đã được khởi tạo (nhất là trên mobile, API load chậm)
+    if (!this.ytPlayers[slide]) {
+      this.initPlayers();
+    }
+
     const p = this.ytPlayers[slide];
     if (!p) return;
-    if (this.isPlaying[slide]) this.pauseYoutube(slide);
-    else this.playYoutube(slide);
+
+    if (this.isPlaying[slide]) {
+      this.pauseYoutube(slide);
+    } else {
+      this.playYoutube(slide);
+    }
   }
 
   private playYoutube(slide: 0 | 1 | 2) {
