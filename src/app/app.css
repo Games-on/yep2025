@@ -1,0 +1,33 @@
+
+.slides {
+  scroll-snap-type: x mandatory;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+}
+
+.slide {
+  scroll-snap-align: start;
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}
+
+.slides {
+  scrollbar-width: none;
+}
+
+.fireworks-layer {
+  pointer-events: none;
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle, rgba(255, 215, 128, 0.9) 0, rgba(255, 215, 128, 0) 60%),
+    radial-gradient(circle, rgba(255, 80, 80, 0.9) 0, rgba(255, 80, 80, 0) 60%),
+    radial-gradient(circle, rgba(255, 255, 255, 0.9) 0, rgba(255, 255, 255, 0) 60%);
+  background-size: 180px 180px, 160px 160px, 140px 140px;
+  background-position:
+    20% 30%,
+    70% 20%,
+    50% 70%;
+}
